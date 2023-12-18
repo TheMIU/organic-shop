@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Carrot",
+        "currency": "$",
+        "price": 500,
+        "image": "carrot.png"
+    },
+    {
+        "id": 2,
+        "name": "Cabbage",
+        "currency": "$",
+        "price": 100,
+        "image": "cabage.png"
+    },
+    {
+        "id": 3,
+        "name": "nikn",
+        "currency": "$",
+        "price": 100,
+        "image": "cabage.png"
+    }
+]
