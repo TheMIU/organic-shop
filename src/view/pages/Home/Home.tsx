@@ -33,7 +33,7 @@ export default class Home extends Component<{},productState> {
     const { data } = this.state;
 
     return (
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-center items-center  bg-[#0e7575] p-5'>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center  bg-[#0e7575] p-5'>
         {
           data.map((product: any) => (
             <Product key={product.id} data={product} />

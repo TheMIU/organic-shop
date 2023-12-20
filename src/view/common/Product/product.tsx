@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import carrot from '../../../images/products/carrot.png'
-import cabbage from '../../../images/products/cabage.png'
 
 interface productProps {
     data: any;
@@ -8,22 +6,27 @@ interface productProps {
 
 export default class product extends Component<productProps> {
     render() {
-        const {data}=this.props;
+        const { data } = this.props;
         const image = require('../../../images/products/' + data.image)
 
         return (
-            <div className='flex flex-col justify-center items-center p-6 bg-white rounded-lg shadow-lg h-[40vh]'>
-                <div className='flex flex-row items-center '>
-                    <div className="m-4">
-                        <img src={image} alt="carrot" />
+            <div className='bg-white rounded-lg shadow-lg h-[40vh]'>
+                {/* image */}
+                <div className='h-[60%] flex items-center justify-center'>
+                    <img src={image} alt="carrot" className='h-[80%] w-auto' />
+                </div>
+
+                {/* details */}
+                <div className='h-[15%] flex justify-center items-center  bg-slate-900 p-0'>
+                    <h3 className='font-bold text-xl text-[#24e2e2] p-0'>{data.name}</h3>
+                </div>
+
+                <div className='h-[25%] flex justify-center items-center rounded-b-lg bg-slate-950 p-0'>
+                    <div className='w-[40%] flex justify-center'>
+                        <h1 className='text-center text-yellow-100 text-xl font-bold'>{data.currency} {data.price}</h1>
                     </div>
-                    <div className='text-left'>
-                        <h3 className='text-2xl font-bold text-[#0e7575] mb-2'>{data.name}</h3>
-                        <h3 className='text-2xl font-bold'>{ data.currency} {data.price} </h3>
-                        <p className='text-sm mb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit
-                            . Obcaecati, pariatur voluptatibus
-                        </p>
-                        <button className="bg-[#0e7575] text-white px-4 py-2 rounded-md hover:bg-[#095c5c] transition duration-300">Add to Cart</button>
+                    <div className='w-[40%] flex justify-center'>
+                        <button className="add-to-cart-btn">Add to Cart <i className="fas fa-shopping-cart"></i></button>
                     </div>
                 </div>
             </div>

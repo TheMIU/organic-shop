@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 export default class Contact extends Component {
   render() {
     return (
-      <div className="container mx-auto mt-8 text-center">
-        <h1 className="text-3xl font-semibold mb-4">Contact Me</h1>
+      <div className=" h-screen text-center bg-[#0e7575]">
+        <h1 className="text-3xl pt-10 text-white font-semibold mb-4">Contact Me</h1>
 
-        <div className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+        <div className="max-w-md mx-auto bg-white bg-opacity-80 p-8 rounded-md shadow-md">
           <form>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-600 text-sm font-medium mb-2">
@@ -15,7 +15,7 @@ export default class Contact extends Component {
               <input
                 type="text"
                 id="name"
-                name="name" 
+                name="name"
                 className="w-full border-2 border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:border-blue-900"
                 placeholder="John Doe"
               />
@@ -46,12 +46,7 @@ export default class Contact extends Component {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-700"
-            >
-              Send Message
-            </button>
+            <button type="submit" className="add-to-cart-btn"> Send Message </button>
           </form>
         </div>
       </div>

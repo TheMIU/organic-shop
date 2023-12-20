@@ -3,12 +3,13 @@ import React, { Component } from 'react'
 export default class extends Component {
   render() {
     return (
-      <div className='flex justify-center items-center h-screen'>
-        <div className='text-center'>
-          <h2 className='text-3xl underline decoration-2 pb-3'>About</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi neque omnis <br />
-            dolorem inventore harum mollitia sequi, tempora soluta nam ex beatae laboriosam impedit labore <br />
-            incidunt pariatur sapiente officia numquam!</p>
+      <div className=" h-screen text-center bg-[#0e7575]">
+        <h1 className="text-3xl pt-10 text-white font-semibold mb-4">About</h1>
+
+        <div className="max-w-md mx-auto bg-white bg-opacity-80 p-8 rounded-md shadow-md">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellen
+            dus voluptatem praesentium molestias, beatae ipsam repellat reprehenderit omnis il
+            lo placeat sint, dolor ut quam dolore officiis eligendi magnam temporibus nesciunt.</p>
         </div>
       </div>
     );

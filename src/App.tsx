@@ -7,9 +7,6 @@ import Login from './view/pages/Login/Login';
 function App() {
   return (
     <BrowserRouter>
-      {/* <DefaultLayout />
-      <Login/> */}
-
       <Routes>
         <Route path='/*' Component={DefaultLayout}></Route>
         <Route path='/login' Component={Login}></Route>

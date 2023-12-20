@@ -1,21 +1,15 @@
-/*Common specific defined class for a set of css styles*/
-.box {
-  background-color: red;
-  padding: 10px;
-  text-align: center;
+.add-to-cart-btn {
+  font-size: smaller;
+  background-color: #0b8b36;
+  color: white;
+  padding-left:0.5rem; /* Equivalent to px-4 */
+  padding-right: 0.5rem; /* Equivalent to px-4 */
+  padding-top: 0.3rem; /* Equivalent to py-2 */
+  padding-bottom: 0.3rem; /* Equivalent to py-2 */
+  border-radius: 0.2rem; /* Equivalent to rounded-md */
+  transition-duration: 300ms; /* Equivalent to transition duration-300 */
 }
 
-/*Separate Utility class for background color*/
-.bg-red {
-  background-color: red;
-}
-
-/*Separate Utility class for padding*/
-.p-10 {
-  padding: 10px;
-}
-
-/*Separate Utility class for center text*/
-.text-center{
-  text-align: center;
+.add-to-cart-btn:hover {
+  background-color: #095c5c;
 }
