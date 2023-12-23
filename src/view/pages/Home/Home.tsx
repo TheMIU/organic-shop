@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Product from '../../common/Product/product'
-import product from '../../common/Product/product';
 
 interface productState{
   data: any;
@@ -14,6 +13,7 @@ export default class Home extends Component<{},productState> {
     }
   }
 
+  /* react life cycle method ekak */
   componentDidMount(): void {
     this.fetchData();
   }

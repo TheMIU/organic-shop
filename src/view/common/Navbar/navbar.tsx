@@ -25,6 +25,9 @@ export default class Navbar extends Component {
                         <li className='inline-block mr-2 text-[15px] pl-5'>
                             <Link to="/about"> About</Link>
                         </li>
+                        <li className='inline-block mr-2 text-[15px] pl-5'>
+                            <Link to="/shopping-cart"> My Cart</Link>
+                        </li>
                     </ul>
 
                     <Link to={'/login'}>

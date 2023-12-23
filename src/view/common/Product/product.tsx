@@ -1,14 +1,26 @@
 import React, { Component } from 'react'
+import ModifyCart from '../ModifyCart/ModifyCart';
 
-interface productProps {
+interface ProductProps {
     data: any;
 }
 
-export default class product extends Component<productProps> {
+interface ProductState {
+    isActive: boolean
+}
+
+export default class product extends Component<ProductProps, ProductState> {
+    constructor(props: ProductProps) {
+        super(props);
+
+        this.state = {
+            isActive: false
+        }
+    }
+
     render() {
         const { data } = this.props;
         const image = require('../../../images/products/' + data.image)
-
         return (
             <div className='bg-white rounded-lg shadow-lg h-[40vh]'>
                 {/* image */}
@@ -26,10 +38,25 @@ export default class product extends Component<productProps> {
                         <h1 className='text-center text-yellow-100 text-xl font-bold'>{data.currency} {data.price}</h1>
                     </div>
                     <div className='w-[40%] flex justify-center'>
-                        <button className="add-to-cart-btn">Add to Cart <i className="fas fa-shopping-cart"></i></button>
+                        {
+                            this.state.isActive ?
+                                <ModifyCart data={{ product: data, isAdded: this.state.isActive }} />
+                                :
+                                <button className="w-full p-1 add-to-cart-btn" onClick={this.addToCartOnClick}>
+                                    Add to Cart <i className="fas fa-shopping-cart"></i></button>
+                        }
                     </div>
                 </div>
             </div>
         )
     }
+
+    private addToCartOnClick = () => {
+        this.setState({
+            isActive: !this.state.isActive
+        }, () => {
+            console.log(this.state.isActive);
+        })
+    }
 }
+
