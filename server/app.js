@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
@@ -23,6 +24,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // static path define
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Enable CORS for all routs
+app.use(cors());
+// handle preflight requests (optional)
+// app.options('*', cors());
 
 // path of the Route
 app.use('/', indexRouter); // base url
