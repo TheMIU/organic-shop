@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
 
-var app = express();
+var app = express(); // create express app
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -17,11 +17,15 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 // convert req body to JSON format
 app.use(express.json());
+// convert form-data to JSON format
 app.use(express.urlencoded({ extended: false }));
+// req.cookies
 app.use(cookieParser());
+// static path define
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// path of the Route
+app.use('/', indexRouter); // base url
 app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler

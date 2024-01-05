@@ -50,4 +50,4 @@ const productList = [
     }
 ];
 
-module.exports = productList;
+module.exports = { productList };

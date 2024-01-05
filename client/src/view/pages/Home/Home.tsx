@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Product from '../../common/Product/product'
 
-interface productState{
+interface productState {
   data: any;
 }
 
-export default class Home extends Component<{},productState> {
+export default class Home extends Component<{}, productState> {
   constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {
@@ -14,14 +14,15 @@ export default class Home extends Component<{},productState> {
   }
 
   /* react life cycle method ekak */
-  componentDidMount(): void {
-    this.fetchData();
+  componentDidMount() {
+    this.fetchData()
+      .then(r => console.log("fetch data done" + r)); // callback function
   }
 
   fetchData = async () => {
     try {
-      const response: Response = await fetch('./product-data.json');
-      const jsonData = await response.json();
+      const response = await fetch('./product-data.json'); // pause execution 
+      const jsonData = await response.json(); // pause execution 
       this.setState({ data: jsonData })
 
     } catch (error) {
