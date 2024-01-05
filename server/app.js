@@ -7,6 +7,7 @@ const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
+var contactsRouter = require('./routes/contact');
 
 var app = express(); // create express app
 
@@ -33,6 +34,7 @@ app.use(cors());
 // path of the Route
 app.use('/', indexRouter); // base url
 app.use('/products', productsRouter);
+app.use('/contact', contactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
