@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
-const {productList} = require('../constants/const')
+const productController = require('../controller/ProductsController');
 
 /* GET all products listing. */
-router.get('/all', function (req, res, next) {
-  res.send(productList);
-});
+router.get('/all', productController.getAllProducts);
+
+router.get('/find/:id', productController.getProduct);
+
+router.post('/save', productController.saveProduct);
+
+router.put('/update/:id', productController.updateProduct);
+
+router.delete('/delete/:id', productController.deleteProduct);
 
 module.exports = router;

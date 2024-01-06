@@ -40,13 +40,6 @@ const productList = [
         "currency": "$",
         "price": 35,
         "image": "coconut.png"
-    },
-    {
-        "id": 7,
-        "name": "Banana",
-        "currency": "$",
-        "price": 12,
-        "image": "banana.png"
     }
 ];
 

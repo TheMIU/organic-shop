@@ -17,7 +17,7 @@ export default class Contact extends Component<ContactProps, ContactState> {
 
   constructor(props: any) {
     super(props);
-    this.api = axios.create({ baseURL: `http://localhost:4000` });
+    this.api = axios.create({ baseURL: `http://localhost:5000` });
     this.state = {
       name: "",
       email: "",
